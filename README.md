@@ -7,4 +7,11 @@ instructions on how to build the RS232 control interface and mimic button
 presses remotely.
 
 Keep in mind that the serial interface provides no feedback (only the TX-pin
-in connected) and everything is done "dead-reckoning".
+is connected) and everything is done "dead-reckoning": if you enter in a
+sub-menu by hand and then you send commands to the serial port the result
+*will be unpredictable*.
+
+## TODO:
+- add an internal state machine mirroring the menu structure
+  - needs some way to sync/reset the state
+  - is it really useful?
