@@ -9,6 +9,8 @@ the "fake" remote control interface. Perhaps one day I will merge them.
 Please see
 http://www.mintron.com/HTM/New_PRODUCTS/ALPHA/download/MTV-63V5HMU.pdf
 
+Compile with: `g++ $(pkg-config --libs --cflags libindi) -lindidriver mintron_serial.cpp -o indi_mintron_serial
+
 ### TODO:
 - is there some way to read all settings with a single command?
 - (related to the last one) someone physically near the camera could alter
@@ -39,6 +41,8 @@ Keep in mind that the serial interface provides no feedback (only the TX-pin
 is connected) and everything is done "dead-reckoning": if you enter in a
 sub-menu by hand and then you send commands to the serial port the result
 *will be unpredictable*.
+
+Compile with: `g++ $(pkg-config --libs --cflags libindi) -lindidriver mintron_fake.cpp -o indi_mintron_fake
 
 ### TODO:
 - add an internal state machine mirroring the menu structure
